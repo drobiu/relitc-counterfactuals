@@ -10,7 +10,7 @@ if [ -z "$6" ]; then
   BASELINE_EDITOR="True"
 fi
 
-CUDA_VISIBLE_DEVICES=0 python3.9 generate_counterfactuals.py \
+CUDA_VISIBLE_DEVICES=0 python generate_counterfactuals.py \
         --data-path ${DATA_PATH} \
         --dataset ${dataset} \
         --explain-wrt ${explain_wrt} \

@@ -2,7 +2,7 @@ source $1    # Shareed params
 source $2    # Task and dataset args
 source $3    # finetuning args 
 
-CUDA_VISIBLE_DEVICES=0 python3.9 finetune_conditional_masked_language_model.py \
+CUDA_VISIBLE_DEVICES=0 python finetune_conditional_masked_language_model.py \
         --data-path ${DATA_PATH} \
         --model-path ${INPUT_MODELS_PATH} \
         --model-output-dir ${FT_CMLM_PATH} \
