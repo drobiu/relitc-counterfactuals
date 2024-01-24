@@ -20,7 +20,7 @@ class IntegratedGradientImportanceScorer():
         class_id : int, the class to explain
         '''
 
-        attributions = self.scorer(x, index=class_id)
+        attributions = self.scorer(x, index=class_id, internal_batch_size=16)
 
         features = []
         values = []
