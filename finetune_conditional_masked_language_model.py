@@ -66,6 +66,8 @@ def get_label_name_dict(dataset):
         return {0 : 'negative', 1 : 'positive'}
     elif dataset == 'OLID':
         return {0 : 'not offensive', 1 : 'offensive'}
+    elif dataset == 'FOMC':
+        return{0 : 'dovish', 1 : 'hawkish', 2 : 'neutral'}
     elif dataset == 'yelp_sentence':
         return {0 : 'negative', 1 : 'positive'}
     elif dataset == 'call_me':

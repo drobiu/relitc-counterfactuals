@@ -57,6 +57,12 @@ def get_class_to_counterfactual_class_name(dataset):
             0:'offensive',
             1:'not offensive'
         }
+    elif dataset == 'FOMC':
+        class2counterf_class_name = {
+            0 : 'dovish', 
+            1 : 'hawkish', 
+            2 : 'neutral'
+        }
     elif dataset == 'yelp_sentence':
         class2counterf_class_name = {
             0:'positive',
@@ -84,6 +90,12 @@ def get_label_to_counterfactual_label(dataset):
         label_name2counterf_label_name = {
             'not offensive':'offensive',
             'offensive':'not offensive'
+        }
+    elif dataset == 'FOMC':
+        label_name2counterf_label_name = {
+            'dovish' : 'dovish', 
+            'neutral' : 'hawkish', 
+            'hawkish' : 'neutral'
         }
     elif dataset == 'yelp_sentence':
         label_name2counterf_label_name = {

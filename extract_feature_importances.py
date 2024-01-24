@@ -112,6 +112,9 @@ def read_data(dataset, data_path):
 
     elif dataset == 'OLID':
         from src.text_preprocessing.olid import make_dataset
+
+    elif dataset == 'FOMC':
+        from src.text_preprocessing.fomc import make_dataset
         
     elif dataset == 'yelp_sentence':
         from src.text_preprocessing.yelp_sentence import make_dataset
@@ -137,6 +140,11 @@ def load_blackbox_and_tokenizer(dataset, blackbox_path):
     elif dataset == 'OLID':
         model_fold = "cardiffnlp/twitter-roberta-base-offensive"
         class2label = {0 : 'not offensive', 1 : 'offensive'}
+        blackbox = BlackBoxTransformersForSequenceClassification(model_fold, no_cuda=False, label_names=class2label)
+        
+    elif dataset == 'FOMC':
+        model_fold = "gtfintechlab/FOMC-RoBERTa"
+        class2label = {0 : 'dovish', 1 : 'hawkish', 2 : 'neutral'}
         blackbox = BlackBoxTransformersForSequenceClassification(model_fold, no_cuda=False, label_names=class2label)
         
     elif dataset == 'yelp_sentence':

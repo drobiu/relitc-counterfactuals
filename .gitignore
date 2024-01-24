@@ -24,3 +24,6 @@ main.pdf
 # data
 data_copy/
 data/
+
+# results
+results/
